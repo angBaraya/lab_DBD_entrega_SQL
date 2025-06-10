@@ -17,4 +17,6 @@ GitHub tiene métricas que muestran cuántas líneas aportó cada uno.
 
 ## Documentación recomendada por la profe
 
+https://www.w3schools.com/sql/default.asp
+
 https://www.w3schools.blog/postgresql-tutorial
