@@ -79,3 +79,22 @@ values (123, 'Locura', 'Avenida Balatro 2033'),
 (132, 'Buggy', 'Sevilla 5410'),
 (444, 'XGames', 'Paseo Caracol 77');
 
+
+INSERT INTO carro_de_compras (rut_cliente)
+VALUES
+('14520364-1'),
+('5123987-0'),
+('20140235-K'),
+('20789133-0'),
+('15488439-4'),
+('22733123-5');
+
+INSERT INTO detalle_carro (id_carro, id_producto, cantidad)
+VALUES
+(1, 2, 1),
+(1, 4, 2),
+(2, 5, 1),
+(3, 4, 1),
+(4, 3, 3),
+(5, 7, 1);
+
