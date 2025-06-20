@@ -63,3 +63,11 @@ values ('Monopoly'),
 ('Yenga'),
 ('Ajedréz'),
 ('Damas');
+
+INSERT INTO cliente(rut_cliente, user_cliente, password_cliente, direccion_cliente, nombre_cliente, apellido_cliente, id_tipo_usuario)
+values ('14520364-1', 'carlossz', 'leclerc', 'Avenida Castilla 55', 'Carlos', 'Sainz', 1),
+('5123987-0', 'martit4', 'Pelusa.2015', 'Avenida Pdte. Sebastian Piñera 2543', 'Marta', 'Solis', 1),
+('20140235-K', 'Lupe.R', 'ricopan7', 'Avenidad SorVicenta 4719', 'Guadalupe', 'Rojas', 1),
+('20789133-0', 'marcOo', 'm4rk0.00', 'Pasaje Navidad 1312', 'Marco', 'Ramos', 1),
+('15488439-4', 'Sofi_A', '24111988', 'Avenida Providencia 4856', 'Sofia', 'Alarcon', 1),
+('22733123-5', 'SebaPolar', 'colocolo91', 'Pasaje Victoria 677', 'Sebastian', 'Polar', 1);
