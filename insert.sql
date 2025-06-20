@@ -71,3 +71,11 @@ values ('14520364-1', 'carlossz', 'leclerc', 'Avenida Castilla 55', 'Carlos', 'S
 ('20789133-0', 'marcOo', 'm4rk0.00', 'Pasaje Navidad 1312', 'Marco', 'Ramos', 1),
 ('15488439-4', 'Sofi_A', '24111988', 'Avenida Providencia 4856', 'Sofia', 'Alarcon', 1),
 ('22733123-5', 'SebaPolar', 'colocolo91', 'Pasaje Victoria 677', 'Sebastian', 'Polar', 1);
+
+insert into tienda (url_producto, stock, descripcion, cantidad_ventas, precio)
+values (123, 'Locura', 'Avenida Balatro 2033'),
+(321, 'CardCastle', 'Avenida Sanchez 1017'),
+(231, 'JuegosLocos', 'Pasaje Prat 2405'),
+(132, 'Buggy', 'Sevilla 5410'),
+(444, 'XGames', 'Paseo Caracol 77');
+
