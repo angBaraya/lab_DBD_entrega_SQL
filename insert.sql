@@ -1,15 +1,14 @@
--- código de ejemplo 2:
+INSERT INTO tipo_usuario(rol_usuario) values 
+('CLIENTE'), 
+('JEFE'), 
+('ADMIN');
 
-INSERT INTO mascotas (id_mascota, nombre, especie, sexo, ubicacion, estado)
-VALUES 
-(120, 'Fermin', 'G', 'M', 'ubi1', 'A'),
-(110, 'Luna', 'G', 'H', 'ubi1', 'A'),
-(130, 'Jacinto', 'G', 'M', 'ubi3', 'B'),
-(150, 'Misha', 'P', 'H', 'ubi2', 'A'),
-(140, 'Aker', 'P', 'M', 'ubi2', 'A'),
-(170, 'Simon', 'G', 'M', 'ubi3', 'B'),
-(190, 'Rupe', 'P', 'M', 'ubi2', 'A'),
-(100, 'Teo', 'G', 'M', 'ubi1', 'A'),
-(200, 'Milka', 'P', 'H', 'ubi2', 'A'),
-(180, 'Mopa', 'P', 'H', 'ubi2', 'B');
-
+INSERT INTO public.usuario(correo_usuario, password_usuario, nombre_usuario, id_tipo_usuario) values
+('carlossz@gmail.com', 'leclerc','carlossz', 1),
+('marta.solis@yahoo.cl', 'Pelusa.2015', 'martit4', 1),
+('niko.xd@gmail.com', 'lupepona', 'Nicolas.Admin', 3),
+('feliperjas@gmail.com', 'drowssap234', 'Felipe.Rojas', 2),
+('Guada.Lupe@gmail.com', 'ricopan7', 'Lupe.R', 1),
+('marco.ortz@gmail.com', 'm4rk0.00', 'marcOo', 1),
+('sofiaalarcon@gmail.com', '24111988', 'Sofi_A', 1),
+('Sebastianpolar@gmail.com', 'colocolo91', 'SebaPolar', 1);
