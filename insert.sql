@@ -12,3 +12,54 @@ INSERT INTO public.usuario(correo_usuario, password_usuario, nombre_usuario, id_
 ('marco.ortz@gmail.com', 'm4rk0.00', 'marcOo', 1),
 ('sofiaalarcon@gmail.com', '24111988', 'Sofi_A', 1),
 ('Sebastianpolar@gmail.com', 'colocolo91', 'SebaPolar', 1);
+
+
+insert into producto (url_producto, stock, descripcion, cantidad_ventas, precio)
+values ('https://www.locura.cl/producto/juego-de-cartas/uno', 20, 'Juego familiar donde las cartas son de cierto número y color', 230, 3500),
+('https://www.cardcastle.cl/producto/juego-de-cartas/naipe-ingles', 15, 'Mazo de naipe inglés, para jugar poker, carioca y muchos más juegos', 300, 3000),
+('https://www.locura.cl/producto/juego-de-cartas/blackjack-21', 30, 'Popular juego de casinos', 120, 5000),
+('https://www.cardcastle.cl/producto/juego-de-cartas/yu-gi-oh!', 20, 'Juego de cartas basado en el anime Yu-Gi-Oh!', 100, 4000),
+('https://www.buggy.cl/producto/juego-de-mesa/monopoly', 10, 'Juego donde simulas negocios y propiedades', 500, 20000),
+('https://www.buggy.cl/producto/juego-de-mesa/catan', 15, 'Juego de estrategia, comercio y civilización', 200, 25000),
+('https://www.hasbro.cl/producto/juego-de-mesa/jenga', 14, 'Juego de habilidad física y precisión', 190, 15000),
+('https://www.hasbro.cl/producto/juego-de-mesa/ajedrez', 10, 'Juego de estrategia por excelencia', 540, 10000),
+('https://www.hasbro.cl/producto/juego-de-mesa/damas', 16, 'Juego de captura y movimiento diagonal', 290, 9000);
+
+
+
+INSERT into ranking (fecha_actualizacion, posicion_ranking)
+values('2025-06-20 00:00:00', 1),
+('2025-06-19 00:00:00', 2),
+('2025-06-18 00:00:00', 3),
+('2025-06-17 00:00:00', 4),
+('2025-06-16 00:00:00', 5);
+
+
+insert into juego_de_mesa (nombre_juego, cantidad_de_jugadores)
+values ('Monopoly', 6),
+('Catán', 4),
+('Yenga', 4),
+('Ajedréz', 2),
+('Damas', 2);
+
+
+insert into valoracion (review, cantidad_estrellas)
+values ('Un clásico familiar que nunca falla. Las reglas son fáciles de entender y siempre terminamos riéndonos mucho. Ideal para jugar con niños, aunque los adultos también lo disfrutan. Muy recomendable para tardes de juego en casa.', 5),
+('Versátil y atemporal. Esta baraja sirve para jugar cientos de juegos, desde Solitario hasta Póker. Es un infaltable en cualquier hogar. Buena calidad de cartas y resistente al uso continuo', 4),
+('Bueno para practicar estrategia y probabilidad. Aunque es un juego de azar, el componente mental lo hace muy entretenido. Ideal para jugar con amigos o en simuladores en línea. No recomendable para menores sin supervisión.', 3),
+('Un juego de mesa muy entretenido y competitivo. Puede durar bastante, pero es ideal para tardes largas. Requiere estrategia y un poco de suerte. Las discusiones por propiedades lo hacen aún más divertido', 4),
+('Uno de los mejores juegos de estrategia que he probado. Cada partida es distinta, y el factor comercio lo hace muy dinámico. Muy recomendado para quienes disfrutan pensar antes de actuar. Reglas simples pero con mucha profundidad.', 5);
+
+insert into boleta (medio_de_pago, fecha_de_emision)
+values ('Tarjeta de crédito', '2025-06-18 15:00:00'),
+('Tarjeta de débito', '2025-06-13 13:00:00'),
+('Tarjeta de débito', '2025-06-14 11:00:00'),
+('Efectivo', '2025-06-15 10:00:00'),
+('Tarjeta de crédito', '2025-06-16 13:00:00');
+
+insert into tipo_de_juego (nombre_juego)
+values ('Monopoly'),
+('Catán'),
+('Yenga'),
+('Ajedréz'),
+('Damas');
