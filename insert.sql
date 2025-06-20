@@ -98,3 +98,17 @@ VALUES
 (4, 3, 3),
 (5, 7, 1);
 
+
+INSERT INTO lista_deseos (id_producto, rut_cliente) VALUES
+(2, '14520364-1'),
+(4, '14520364-1'),
+(5, '5123987-0'),
+(3, '20140235-K'),
+(2, '20789133-0'),
+(7, '15488439-4'),	
+(3, '22733123-5');
+
+INSERT INTO productoXlista_deseos (id_producto, id_lista_deseos)
+SELECT id_producto, id_lista_deseos
+FROM lista_deseos;
+
