@@ -185,3 +185,10 @@ VALUES (3, 1),
 (1, 3),
 (4, 4),
 (5, 5);
+
+INSERT INTO juegoXtipo (codigo_juego, id_tipo_juego)
+VALUES (1,1),
+(2,2),
+(3,3),
+(4,4),
+(5,5);
