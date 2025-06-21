@@ -127,3 +127,22 @@ values(1, 2, 1),
 (4, 3, 3),
 (5, 7, 1);
 
+INSERT INTO tiendaXproducto (id_tienda, id_producto) VALUES
+(1, 1),
+(2, 2),
+(1, 3),
+(2, 4),
+(4, 5),
+(4, 6),
+(5, 7),
+(5, 8),
+(5, 9);
+
+INSERT INTO rankingXproducto (id_ranking, id_producto) VALUES
+(1, 8),
+(2, 5),
+(3, 2),
+(4, 9),
+(5, 1); 
+
+
