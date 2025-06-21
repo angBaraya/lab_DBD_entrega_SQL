@@ -151,3 +151,20 @@ VALUES (Criatura, 3),
 (Hechizo, 1),
 (Personaje, 4),
 (Objeto, 5);
+
+insert into permiso(tipo_permiso)
+values('Subir Productos'),
+('Realizar CRUD'),
+('Actualizar datos usuarios'),
+('Categorizar productos'),
+('Actualizar datos productos'),
+('Eliminar Productos');
+
+Insert into tipo_usuarioXpermiso(id_tipo_usuario, id_permiso)
+values(1, 3),
+(2, 1),
+(2, 3),
+(2, 4),
+(2, 5),
+(2, 6),
+(3, 2);
