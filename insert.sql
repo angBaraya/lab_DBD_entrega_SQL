@@ -86,8 +86,7 @@ VALUES
 ('5123987-0'),
 ('20140235-K'),
 ('20789133-0'),
-('15488439-4'),
-('22733123-5');
+('15488439-4');
 
 INSERT INTO detalle_carro (id_carro, id_producto, cantidad)
 VALUES
@@ -161,8 +160,7 @@ INSERT INTO carro_de_comprasXproducto (id_carro, id_producto) VALUES
 (3, 4),
 (4, 6),
 (4, 7),
-(5, 8),
-(6, 9);
+(5, 8);
 
 insert into permiso(tipo_permiso)
 values('Subir Productos'),
