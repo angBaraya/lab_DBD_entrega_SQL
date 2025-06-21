@@ -112,3 +112,11 @@ INSERT INTO productoXlista_deseos (id_producto, id_lista_deseos)
 SELECT id_producto, id_lista_deseos
 FROM lista_deseos;
 
+insert into detalle_boleta(id_boleta, id_producto, cantidad)
+values(1, 2, 1),
+(1, 4, 2),
+(2, 5, 1),
+(3, 4, 1),
+(4, 3, 3),
+(5, 7, 1);
+
