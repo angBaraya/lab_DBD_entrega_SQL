@@ -205,7 +205,8 @@ CREATE TABLE IF NOT EXISTS detalle_carro (
   cantidad INT CHECK (cantidad > 0),
   PRIMARY KEY (id_detalle_carro),
   FOREIGN KEY (id_carro) REFERENCES carro_de_compras(id_carro),
-  FOREIGN KEY (id_producto) REFERENCES producto(id_producto)
+  FOREIGN KEY (id_producto) REFERENCES producto(id_producto),
+  UNIQUE (id_carro, id_producto)
 );
 
 CREATE TABLE IF NOT EXISTS detalle_boleta (
