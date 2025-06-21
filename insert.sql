@@ -35,12 +35,12 @@ values('2025-06-20 00:00:00', 1),
 ('2025-06-16 00:00:00', 5);
 
 
-insert into juego_de_mesa (nombre_juego, cantidad_de_jugadores)
-values ('Monopoly', 6),
-('Catán', 4),
-('Yenga', 4),
-('Ajedréz', 2),
-('Damas', 2);
+insert into juego_de_mesa (nombre_juego, cantidad_de_jugadores, id_producto)
+values ('Monopoly', 6, 5),
+('Catán', 4, 6),
+('Yenga', 4, 7),
+('Ajedréz', 2, 8),
+('Damas', 2, 9);
 
 
 insert into valoracion (review, cantidad_estrellas)
