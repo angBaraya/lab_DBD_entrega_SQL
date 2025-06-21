@@ -37,10 +37,10 @@ CREATE TABLE IF NOT EXISTS cliente(
 
 
 CREATE TABLE IF NOT EXISTS tipo_usuarioXpermiso(
-	id_usuario INT,
+	id_tipo_usuario INT,
   	id_permiso INT,
-  	PRIMARY KEY (id_usuario, id_permiso),   
-  	FOREIGN KEY (id_usuario) REFERENCES tipo_usuario(id_tipo_usuario),
+  	PRIMARY KEY (id_tipo_usuario, id_permiso),   
+  	FOREIGN KEY (id_tipo_usuario) REFERENCES tipo_usuario(id_tipo_usuario),
   	FOREIGN KEY (id_permiso) REFERENCES permiso(id_permiso)
     --agrege esto como FK, no esta en el diagrama, si no ocupamos esto para las consultas lo sacamos,
     --si lo ocupamos lo ponemos en el diagrama
