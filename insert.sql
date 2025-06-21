@@ -112,3 +112,10 @@ INSERT INTO productoXlista_deseos (id_producto, id_lista_deseos)
 SELECT id_producto, id_lista_deseos
 FROM lista_deseos;
 
+INSERT INTO carta (marca, estado, coleccion, rareza, anio)
+VALUES ('Magic: The Gathering', 'Poor', 'Fuego II', 'Común', 2014),
+('Yu-Gi-Oh!', 'Good', 'Hechizo', 'Poco común', 2021),
+('Pokemon TCG', 'Excellent', 'Agua', 'Rara', 2016),
+('Dragon Ball Super Card Game', 'Near Mint', 'Saiyajin Blue', 'Muy rara', 2022),
+('Digimon', 'Mint', 'Fuego VI', 'Legendaria', 2010);
+
