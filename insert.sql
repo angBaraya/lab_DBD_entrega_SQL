@@ -152,6 +152,18 @@ VALUES (Criatura, 3),
 (Personaje, 4),
 (Objeto, 5);
 
+
+INSERT INTO carro_de_comprasXproducto (id_carro, id_producto) VALUES
+(1, 1),
+(1, 3),
+(2, 2),
+(2, 5),
+(3, 4),
+(4, 6),
+(4, 7),
+(5, 8),
+(6, 9);
+
 insert into permiso(tipo_permiso)
 values('Subir Productos'),
 ('Realizar CRUD'),
@@ -168,3 +180,5 @@ values(1, 3),
 (2, 5),
 (2, 6),
 (3, 2);
+
+
