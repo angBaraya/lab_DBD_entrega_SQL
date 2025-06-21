@@ -119,3 +119,11 @@ VALUES ('Magic: The Gathering', 'Poor', 'Fuego II', 'Común', 2014),
 ('Dragon Ball Super Card Game', 'Near Mint', 'Saiyajin Blue', 'Muy rara', 2022),
 ('Digimon', 'Mint', 'Fuego VI', 'Legendaria', 2010);
 
+insert into detalle_boleta(id_boleta, id_producto, cantidad)
+values(1, 2, 1),
+(1, 4, 2),
+(2, 5, 1),
+(3, 4, 1),
+(4, 3, 3),
+(5, 7, 1);
+
