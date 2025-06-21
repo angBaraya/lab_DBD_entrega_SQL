@@ -1,9 +1,10 @@
+-----------------------------------------------------------------------------------------------
 -- SENTENCIA 1. Agregar un juego de mesa / carta al carrito de compras.
 
 -- supuestos:
 -- existe un carro de compras con id_carro = 1 en la tabla carro_de_compras
 -- el producto a agregar ya esta en la tabla producto (en esta caso tiene id_producto = 5)
--- y en este caso tiene id_producto = 999
+-- y en este caso tiene id_producto = 5
 
 -- Ejemplo para verificar uso:
 
@@ -24,7 +25,7 @@ select * from detalle_carro
 --(se recomienda ejecutar 3 veces este cambio para 
 -- verificar el uso de la siguiente sentencia)
 
-
+---------------------------------------------------------------------------------------------
 -- 2. Eliminar un juego de mesa / carta del carrito de compras.
 
 -- supuestos:
