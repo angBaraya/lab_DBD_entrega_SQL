@@ -13,6 +13,13 @@ INSERT INTO public.usuario(correo_usuario, password_usuario, nombre_usuario, id_
 ('sofiaalarcon@gmail.com', '24111988', 'Sofi_A', 1),
 ('Sebastianpolar@gmail.com', 'colocolo91', 'SebaPolar', 1);
 
+INSERT INTO cliente(rut_cliente, user_cliente, password_cliente, direccion_cliente, nombre_cliente, apellido_cliente, id_tipo_usuario)
+values ('14520364-1', 'carlossz', 'leclerc', 'Avenida Castilla 55', 'Carlos', 'Sainz', 1),
+('5123987-0', 'martit4', 'Pelusa.2015', 'Avenida Pdte. Sebastian Piñera 2543', 'Marta', 'Solis', 1),
+('20140235-K', 'Lupe.R', 'ricopan7', 'Avenidad SorVicenta 4719', 'Guadalupe', 'Rojas', 1),
+('20789133-0', 'marcOo', 'm4rk0.00', 'Pasaje Navidad 1312', 'Marco', 'Ramos', 1),
+('15488439-4', 'Sofi_A', '24111988', 'Avenida Providencia 4856', 'Sofia', 'Alarcon', 1),
+('22733123-5', 'SebaPolar', 'colocolo91', 'Pasaje Victoria 677', 'Sebastian', 'Polar', 1);
 
 insert into producto (url_producto, stock, descripcion, cantidad_ventas, precio)
 values ('https://www.locura.cl/producto/juego-de-cartas/uno', 20, 'Juego familiar donde las cartas son de cierto número y color', 230, 3500),
@@ -24,61 +31,6 @@ values ('https://www.locura.cl/producto/juego-de-cartas/uno', 20, 'Juego familia
 ('https://www.hasbro.cl/producto/juego-de-mesa/jenga', 14, 'Juego de habilidad física y precisión', 190, 15000),
 ('https://www.hasbro.cl/producto/juego-de-mesa/ajedrez', 10, 'Juego de estrategia por excelencia', 540, 10000),
 ('https://www.hasbro.cl/producto/juego-de-mesa/damas', 16, 'Juego de captura y movimiento diagonal', 290, 9000);
-
-
-
-INSERT into ranking (fecha_actualizacion, posicion_ranking)
-values('2025-06-20 00:00:00', 1),
-('2025-06-19 00:00:00', 2),
-('2025-06-18 00:00:00', 3),
-('2025-06-17 00:00:00', 4),
-('2025-06-16 00:00:00', 5);
-
-
-insert into juego_de_mesa (nombre_juego, cantidad_de_jugadores, id_producto)
-values ('Monopoly', 6, 5),
-('Catán', 4, 6),
-('Yenga', 4, 7),
-('Ajedréz', 2, 8),
-('Damas', 2, 9);
-
-
-insert into valoracion (review, cantidad_estrellas)
-values ('Un clásico familiar que nunca falla. Las reglas son fáciles de entender y siempre terminamos riéndonos mucho. Ideal para jugar con niños, aunque los adultos también lo disfrutan. Muy recomendable para tardes de juego en casa.', 5),
-('Versátil y atemporal. Esta baraja sirve para jugar cientos de juegos, desde Solitario hasta Póker. Es un infaltable en cualquier hogar. Buena calidad de cartas y resistente al uso continuo', 4),
-('Bueno para practicar estrategia y probabilidad. Aunque es un juego de azar, el componente mental lo hace muy entretenido. Ideal para jugar con amigos o en simuladores en línea. No recomendable para menores sin supervisión.', 3),
-('Un juego de mesa muy entretenido y competitivo. Puede durar bastante, pero es ideal para tardes largas. Requiere estrategia y un poco de suerte. Las discusiones por propiedades lo hacen aún más divertido', 4),
-('Uno de los mejores juegos de estrategia que he probado. Cada partida es distinta, y el factor comercio lo hace muy dinámico. Muy recomendado para quienes disfrutan pensar antes de actuar. Reglas simples pero con mucha profundidad.', 5);
-
-insert into boleta (medio_de_pago, fecha_de_emision)
-values ('Tarjeta de crédito', '2025-06-18 15:00:00'),
-('Tarjeta de débito', '2025-06-13 13:00:00'),
-('Tarjeta de débito', '2025-06-14 11:00:00'),
-('Efectivo', '2025-06-15 10:00:00'),
-('Tarjeta de crédito', '2025-06-16 13:00:00');
-
-insert into tipo_de_juego (nombre_juego)
-values ('Monopoly'),
-('Catán'),
-('Yenga'),
-('Ajedréz'),
-('Damas');
-
-INSERT INTO cliente(rut_cliente, user_cliente, password_cliente, direccion_cliente, nombre_cliente, apellido_cliente, id_tipo_usuario)
-values ('14520364-1', 'carlossz', 'leclerc', 'Avenida Castilla 55', 'Carlos', 'Sainz', 1),
-('5123987-0', 'martit4', 'Pelusa.2015', 'Avenida Pdte. Sebastian Piñera 2543', 'Marta', 'Solis', 1),
-('20140235-K', 'Lupe.R', 'ricopan7', 'Avenidad SorVicenta 4719', 'Guadalupe', 'Rojas', 1),
-('20789133-0', 'marcOo', 'm4rk0.00', 'Pasaje Navidad 1312', 'Marco', 'Ramos', 1),
-('15488439-4', 'Sofi_A', '24111988', 'Avenida Providencia 4856', 'Sofia', 'Alarcon', 1),
-('22733123-5', 'SebaPolar', 'colocolo91', 'Pasaje Victoria 677', 'Sebastian', 'Polar', 1);
-
-insert into tienda (nombre_tienda, direccion_tienda)
-values ('Locura', 'Avenida Balatro 2033'),
-('CardCastle', 'Avenida Sanchez 1017'),
-('JuegosLocos', 'Pasaje Prat 2405'),
-('Buggy', 'Sevilla 5410'),
-('XGames', 'Paseo Caracol 77');
-
 
 INSERT INTO carro_de_compras (rut_cliente)
 VALUES
@@ -98,6 +50,52 @@ VALUES
 (5, 7, 1);
 
 
+INSERT into ranking (fecha_actualizacion, posicion_ranking)
+values('2025-06-20 00:00:00', 1),
+('2025-06-19 00:00:00', 2),
+('2025-06-18 00:00:00', 3),
+('2025-06-17 00:00:00', 4),
+('2025-06-16 00:00:00', 5);
+
+
+insert into juego_de_mesa (nombre_juego, cantidad_de_jugadores, id_producto)
+values ('Monopoly', 6, 5),
+('Catán', 4, 6),
+('Yenga', 4, 7),
+('Ajedréz', 2, 8),
+('Damas', 2, 9);
+
+
+insert into valoracion (review, cantidad_estrellas, rut_cliente, id_producto)
+values ('Un clásico familiar que nunca falla. Las reglas son fáciles de entender y siempre terminamos riéndonos mucho. Ideal para jugar con niños, aunque los adultos también lo disfrutan. Muy recomendable para tardes de juego en casa.', 5, '14520364-1', 1),
+('Versátil y atemporal. Esta baraja sirve para jugar cientos de juegos, desde Solitario hasta Póker. Es un infaltable en cualquier hogar. Buena calidad de cartas y resistente al uso continuo', 4, '20140235-K', 2),
+('Bueno para practicar estrategia y probabilidad. Aunque es un juego de azar, el componente mental lo hace muy entretenido. Ideal para jugar con amigos o en simuladores en línea. No recomendable para menores sin supervisión.', 3, '20789133-0', 3),
+('Un juego de mesa muy entretenido y competitivo. Puede durar bastante, pero es ideal para tardes largas. Requiere estrategia y un poco de suerte. Las discusiones por propiedades lo hacen aún más divertido', 4, '15488439-4', 5),
+('Uno de los mejores juegos de estrategia que he probado. Cada partida es distinta, y el factor comercio lo hace muy dinámico. Muy recomendado para quienes disfrutan pensar antes de actuar. Reglas simples pero con mucha profundidad.', 5, '22733123-5', 8);
+
+insert into boleta (medio_de_pago, fecha_de_emision, id_carro)
+values ('Tarjeta de crédito', '2025-06-18 15:00:00', 1),
+('Tarjeta de débito', '2025-06-13 13:00:00', 2),
+('Tarjeta de débito', '2025-06-14 11:00:00', 3),
+('Efectivo', '2025-06-15 10:00:00', 4),
+('Tarjeta de crédito', '2025-06-16 13:00:00', 5);
+
+insert into tipo_de_juego (nombre_juego,codigo_juego)
+values ('Monopoly',1),
+('Catán', 2),
+('Yenga', 3),
+('Ajedréz', 4),
+('Damas', 5);
+
+
+insert into tienda (nombre_tienda, direccion_tienda)
+values ('Locura', 'Avenida Balatro 2033'),
+('CardCastle', 'Avenida Sanchez 1017'),
+('JuegosLocos', 'Pasaje Prat 2405'),
+('Buggy', 'Sevilla 5410'),
+('XGames', 'Paseo Caracol 77');
+
+
 INSERT INTO lista_deseos (id_producto, rut_cliente) VALUES
 (2, '14520364-1'),
 (4, '14520364-1'),
@@ -107,9 +105,6 @@ INSERT INTO lista_deseos (id_producto, rut_cliente) VALUES
 (7, '15488439-4'),	
 (3, '22733123-5');
 
-INSERT INTO productoXlista_deseos (id_producto, id_lista_deseos)
-SELECT id_producto, id_lista_deseos
-FROM lista_deseos;
 
 INSERT INTO carta (marca, estado, coleccion, rareza, anio)
 VALUES ('Magic: The Gathering', 'Poor', 'Fuego II', 'Común', 2014),
@@ -152,6 +147,18 @@ VALUES ('Criatura', 3),
 ('Objeto', 5);
 
 
+insert into permiso(tipo_permiso)
+values('Subir Productos'),
+('Realizar CRUD'),
+('Actualizar datos usuarios'),
+('Categorizar productos'),
+('Actualizar datos productos'),
+('Eliminar Productos');
+
+INSERT INTO productoXlista_deseos (id_producto, id_lista_deseos)
+SELECT id_producto, id_lista_deseos
+FROM lista_deseos;
+
 INSERT INTO carro_de_comprasXproducto (id_carro, id_producto) VALUES
 (1, 1),
 (1, 3),
@@ -161,14 +168,6 @@ INSERT INTO carro_de_comprasXproducto (id_carro, id_producto) VALUES
 (4, 6),
 (4, 7),
 (5, 8);
-
-insert into permiso(tipo_permiso)
-values('Subir Productos'),
-('Realizar CRUD'),
-('Actualizar datos usuarios'),
-('Categorizar productos'),
-('Actualizar datos productos'),
-('Eliminar Productos');
 
 Insert into tipo_usuarioXpermiso(id_tipo_usuario, id_permiso)
 values(1, 3),
