@@ -181,4 +181,9 @@ values(1, 3),
 (2, 6),
 (3, 2);
 
-
+INSERT INTO cartaXtipo (id_carta, id_tipo_carta)
+VALUES (3, 1),
+(2, 2),
+(1, 3),
+(4, 4),
+(5, 5);
