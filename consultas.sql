@@ -1,3 +1,34 @@
+
+
+-- PARA VER LOS DATOS:
+select * from boleta
+select * from carro_de_compras
+select * from carro_de_comprasxproducto
+select * from carta
+select * from cartaxtipo
+select * from cliente
+select * FROM detalle_boleta
+select * from detalle_carro
+select * from juegoxtipo
+select * from juego_de_mesa
+select * FROM lista_deseos
+select * from permiso
+select * FROM producto
+select * from productoxlista_deseos
+select * from ranking
+select * from rankingxproducto
+select * FROM tienda
+select * from tiendaxproducto
+select * FROM tipo_de_carta
+select * from tipo_de_juego
+select * from tipo_usuario
+select * from tipo_usuarioxpermiso
+SELECT * FROM usuario
+SELECT * FROM valoracion
+
+
+
+
 -----------------------------------------------------------------------------------------------
 -- SENTENCIA 1. Agregar un juego de mesa / carta al carrito de compras.
 
@@ -26,7 +57,7 @@ select * from detalle_carro
 -- verificar el uso de la siguiente sentencia)
 
 ---------------------------------------------------------------------------------------------
--- 2. Eliminar un juego de mesa / carta del carrito de compras.
+-- SENTENCIA 2. Eliminar un juego de mesa / carta del carrito de compras.
 
 -- supuestos:
 -- los valores de ejemplo, son los del producto que agregamos en la sentencia de arriba
@@ -37,10 +68,10 @@ select * from detalle_carro
 -- Ejemplo para verificar uso:
 
 -- para este ejemplo, se asume que se ejecuto la sentencia de arriba 3 veces,
--- por lo que id_carro = 1 debería tener 3 unidades de id_producto 5
+-- por lo que id_carro = 1 debería tener 3 unidades de id_producto = 5
 
 
---SENTENCIA 2: (se deben ejecutar las dos partes al mismo tiempo)
+--SENTENCIA 2 (se deben ejecutar las dos partes al mismo tiempo)
 -- si solo hay una unidad, se elimina completamente
 DELETE FROM detalle_carro
 WHERE id_carro = 1 AND id_producto = 5 AND cantidad = 1;
@@ -48,6 +79,7 @@ WHERE id_carro = 1 AND id_producto = 5 AND cantidad = 1;
 UPDATE detalle_carro
 SET cantidad = cantidad - 1
 WHERE id_carro = 1 AND id_producto = 5 AND cantidad > 1;
+
 
 -- para ir verificando los cambios se hace:
 SELECT * from detalle_carro
@@ -59,23 +91,17 @@ SELECT * from detalle_carro
 
 
 
+select * FROM detalle_carro
+-------------------------------------------------------------------------------------
+-- SENTENCIA 3: Mostrar los juegos de mesa / cartas del carrito de compras 
 
+-- Queríamos implementar esta sentencia con join, pero se nos complico la cosa,
+-- por lo que solo mostraremos el id de los productos que tiene en el carro
+SELECT id_producto, cantidad
+FROM detalle_carro
+WHERE id_carro = 1;
 
--- 3. Mostrar los juegos de mesa / cartas del carrito de compras 
-
--- juegos de mesa
-SELECT Jmesa.nombre_juego AS nombre, Dcarro.cantidad, 'Juego de mesa' AS tipo
-FROM detalle_carro Dcarro
-JOIN juego_de_mesa Jmesa ON Dcarro.id_producto = Jmesa.id_producto
-WHERE Dcarro.id_carro = 1
-UNION
--- cartas
-SELECT carta.marca AS nombre, Dcarro.cantidad, 'Carta' AS tipo
-FROM detalle_carro Dcarro
-JOIN carta ON Dcarro.id_producto = carta.id_producto
-WHERE Dcarro.id_carro = 1;
-
-
+------------------------------------------------------------------------------------------------
 -- SENTENCIA 4. Mostrar el precio total a pagar por el carrito de compras.
 
 -- Supuestos:
@@ -105,8 +131,9 @@ FROM detalle_carro Dcarro
 JOIN producto ON Dcarro.id_producto = producto.id_producto
 WHERE Dcarro.id_carro = 1;
 
-
--- 5. Mostrar todos los juegos de mesa y cartas que se vendan en una ubicacion geografica especifica.
+---------------------------------------------------------------------------------------------------
+-- SENTENCIA 5. Mostrar todos los juegos de mesa y cartas que se
+--              vendan en una ubicacion geografica especifica.
 
 -- juegos de mesa
 SELECT Jmesa.nombre_juego AS nombre, tienda.direccion_tienda AS ubicacion, 'Juego de mesa' AS tipo
@@ -142,25 +169,34 @@ ORDER BY cantidad_ventas DESC;
 
 
 
+----------------------------------------------------------------------------------------------
+-- SENTENCIA 7. Mostrar lista de deseos de un usuario.
+
+-- SENTENCIA 7 
+-- solo muestra el id_producto, tratamos de mostrar algo mas descriptivo,
+-- pero no logramos hacerlo por errores con el join
+SELECT id_producto
+FROM lista_deseos
+WHERE rut_cliente = '14520364-1';
 
 
-
--- 7. Mostrar lista de deseos de un usuario.
-
--- juegos de mesa en la lista de deseos
-SELECT JMesa.nombre_juego AS nombre, producto.precio, 'Juego de mesa' AS tipo
-FROM lista_de_deseos deseos
-JOIN producto producto ON deseos.id_producto = producto.id_producto
-JOIN juego_de_mesa JMesa ON producto.id_producto = JMesa.id_producto
-WHERE deseos.rut_cliente = '12345678-9'
-
+/*
+INTENTO FALLIDO DE MOSTRAR EL NOMBRE
+-- Juegos de mesa
+SELECT jm.nombre_juego AS nombre, p.precio, 'Juego de mesa' AS tipo
+FROM lista_deseos ld
+JOIN producto p ON ld.id_producto = p.id_producto
+JOIN juego_de_mesa jm ON p.id_producto = jm.id_producto
+WHERE ld.rut_cliente = '14520364-1'
 UNION
+-- Cartas
+SELECT c.marca AS nombre, p.precio, 'Carta' AS tipo
+FROM lista_deseos ld
+JOIN producto p ON ld.id_producto = p.id_producto
+JOIN carta c ON p.id_producto = c.id_producto
+WHERE ld.rut_cliente = '14520364-1';
+*/
 
--- cartas en la lista de deseos
-SELECT carta.marca AS nombre, producto.precio, 'Carta' AS tipo
-FROM lista_de_deseos deseos
-JOIN producto producto ON deseos.id_producto = producto.id_producto
-JOIN carta carta ON producto.id_producto = carta.id_producto
-WHERE deseos.rut_cliente = '12345678-9';
+
 
 
