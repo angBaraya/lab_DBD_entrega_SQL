@@ -146,11 +146,11 @@ INSERT INTO rankingXproducto (id_ranking, id_producto) VALUES
 (5, 1); 
 
 INSERT INTO tipo_de_carta(nombre_tipo_carta, id_carta)
-VALUES (Criatura, 3),
-(Recurso, 2),
-(Hechizo, 1),
-(Personaje, 4),
-(Objeto, 5);
+VALUES ('Criatura', 3),
+('Recurso', 2),
+('Hechizo', 1),
+('Personaje', 4),
+('Objeto', 5);
 
 
 INSERT INTO carro_de_comprasXproducto (id_carro, id_producto) VALUES
